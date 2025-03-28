@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unique Features Section with Auto-Scroll</title>
+    <!-- Import Montserrat Font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .features-section {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #f9f9f9;
+            overflow: hidden;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            color: #333;
+            font-weight: 600;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .section-title.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .features-container {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        
+        .features-wrapper {
+            display: flex;
+            gap: 30px;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .feature-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            min-width: 300px;
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .feature-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .feature-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        
+        .feature-card h2 {
+            font-size: 1.5rem;
+            margin: 15px 0;
+            color: #333;
+            font-weight: 600;
+        }
+        
+        .feature-card p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.5;
+            font-weight: 400;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        /* Scroll Indicator Dots */
+        
+        .scroll-indicator {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .dot {
+            width: 30px;
+            height: 5px;
+            background-color: #bbb;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .dot.active {
+            background-color: #333;
+        }
+        /* Responsive Design */
+        
+        @media (max-width: 1024px) {
+            .feature-card {
+                min-width: 250px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .feature-card {
+                min-width: 200px;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .feature-card {
+                min-width: 180px;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+            .feature-card h2 {
+                font-size: 1.2rem;
+            }
+            .feature-card p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="features-section">
+        <h1 class="section-title">UNIQUE FEATURES</h1>
+        <div class="features-container" id="featuresContainer">
+            <div class="features-wrapper" id="featuresWrapper">
+                <div class="feature-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Marketplace Integration">
+                    <h2>Marketplace Integration</h2>
+                    <p>Marketplace integration connects your day-to-day inventory and sales to Amazon in one dashboard, and automate customer experience and scale.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Marketplace Integration">
+                    <h2>Marketplace Integration</h2>
+                    <p>Marketplace integration connects your day-to-day inventory and sales to Amazon in one dashboard, and automate customer experience and scale.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Marketplace Integration">
+                    <h2>Marketplace Integration</h2>
+                    <p>Marketplace integration connects your day-to-day inventory and sales to Amazon in one dashboard, and automate customer experience and scale.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Marketplace Integration">
+                    <h2>Marketplace Integration</h2>
+                    <p>Marketplace integration connects your day-to-day inventory and sales to Amazon in one dashboard, and automate customer experience and scale.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="https://via.placeholder.com/300x200" alt="Marketplace Integration">
+                    <h2>Marketplace Integration</h2>
+                    <p>Marketplace integration connects your day-to-day inventory and sales to Amazon in one dashboard, and automate customer experience and scale.</p>
+                </div>
+
+            </div>
+        </div>
+        <!-- Scroll Indicator Dots -->
+        <div class="scroll-indicator" id="scrollIndicator">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+    <script>
+        // Scroll animation for title and cards
+        const sectionTitle = document.querySelector('.section-title');
+        const featureCards = document.querySelectorAll('.feature-card');
+
+        const revealElements = () => {
+            const sectionTop = document.querySelector('.features-section').getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            if (sectionTop < windowHeight * 0.8) {
+                sectionTitle.classList.add('visible');
+
+                featureCards.forEach((card, index) => {
+                    setTimeout(() => {
+                        card.classList.add('visible');
+                    }, index * 200); // Staggered animation for each card
+                });
+            }
+        };
+
+        window.addEventListener('scroll', revealElements);
+        window.addEventListener('load', revealElements);
+
+        // Auto-scrolling and dot navigation
+        const featuresContainer = document.getElementById('featuresContainer');
+        const featuresWrapper = document.getElementById('featuresWrapper');
+        const dots = document.querySelectorAll('.dot');
+        const cards = document.querySelectorAll('.feature-card');
+        let currentIndex = 0;
+        let cardWidth = cards[0].offsetWidth + 30; // Card width + gap
+        const totalCards = cards.length;
+        const visibleCards = Math.floor(featuresContainer.offsetWidth / cardWidth) || 1;
+        const maxIndex = Math.max(0, totalCards - visibleCards);
+
+        // Update card width on resize for responsiveness
+        window.addEventListener('resize', () => {
+            cardWidth = cards[0].offsetWidth + 30;
+            const newVisibleCards = Math.floor(featuresContainer.offsetWidth / cardWidth) || 1;
+            const newMaxIndex = Math.max(0, totalCards - newVisibleCards);
+            currentIndex = Math.min(currentIndex, newMaxIndex);
+            featuresWrapper.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+            updateDots();
+        });
+
+        // Update active dot
+        const updateDots = () => {
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+        };
+
+        // Scroll to specific index
+        const scrollToIndex = (index) => {
+            currentIndex = Math.max(0, Math.min(index, maxIndex));
+            featuresWrapper.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+            updateDots();
+        };
+
+        // Auto-scroll every 3 seconds
+        const autoScroll = () => {
+            currentIndex = (currentIndex + 1) % (maxIndex + 1);
+            scrollToIndex(currentIndex);
+        };
+
+        let autoScrollInterval = setInterval(autoScroll, 3000);
+
+        // Pause auto-scroll on hover
+        featuresContainer.addEventListener('mouseenter', () => {
+            clearInterval(autoScrollInterval);
+        });
+
+        featuresContainer.addEventListener('mouseleave', () => {
+            autoScrollInterval = setInterval(autoScroll, 3000);
+        });
+
+        // Click on dot to scroll
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                scrollToIndex(index);
+            });
+        });
+
+        // Add hover effect for cards
+        featureCards.forEach(card => {
+            card.addEventListener('mouseover', () => {
+                card.style.cursor = 'pointer';
+            });
+
+            card.addEventListener('mouseout', () => {
+                card.style.cursor = 'default';
+            });
+        });
+    </script>
+</body>
+
+</html>
