@@ -336,110 +336,6 @@
             margin: 0 20px 20px;
         }
         /* Footer Styles (Imported from farm.html) */
-        
-        footer {
-            background-color: #1a1a1a !important;
-            color: #ffffff;
-            padding: 40px 20px;
-            text-align: center;
-            width: 100%;
-            position: relative;
-            z-index: 3;
-            font-family: 'Montserrat', sans-serif;
-        }
-        
-        .footer-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-        
-        .footer-section {
-            flex: 1;
-            min-width: 200px;
-            padding: 10px 20px 20px 20px;
-            text-align: left;
-        }
-        
-        .contact p a {
-            color: #ffffff;
-            text-decoration: none;
-        }
-        
-        .footer-section1 {
-            flex: 1;
-            min-width: 200px;
-            padding: 40px 20px 20px 20px;
-            text-align: left;
-        }
-        
-        .company-info {
-            flex: 2;
-        }
-        
-        .footer-logo {
-            display: block;
-            max-width: 120px;
-            margin-bottom: 10px;
-        }
-        
-        .footer-section h2 {
-            font-size: 1.5em;
-            margin-bottom: 15px;
-        }
-        
-        .footer-section h3 {
-            font-size: 25px;
-            margin-bottom: 15px;
-        }
-        
-        .footer-section ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .footer-section ul li {
-            margin-bottom: 10px;
-            font-size: 16px;
-        }
-        
-        .footer-section ul li a {
-            color: #ffffff;
-            text-decoration: none;
-        }
-        
-        .footer-section ul li a:hover {
-            text-decoration: underline;
-        }
-        
-        .social-icons {
-            display: flex;
-            gap: 10px;
-            justify-content: flex-start;
-            margin: 10px 0;
-        }
-        
-        .social-icons a {
-            color: #ffffff;
-            font-size: 24px;
-            display: inline-block;
-        }
-        
-        .copyright {
-            text-align: left;
-            padding: 10px;
-            margin-top: 20px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .copyright-symbol {
-            font-size: 40px;
-            margin-right: 5px;
-        }
         /* Responsive Adjustments */
         
         @media (max-width: 768px) {
@@ -465,26 +361,6 @@
             .middle-border h2 {
                 font-size: 32px;
             }
-            .footer-container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .footer-section,
-            .footer-section1 {
-                text-align: center;
-                padding: 20px 15px;
-            }
-            .social-icons {
-                justify-content: center;
-            }
-            .copyright {
-                text-align: center;
-                flex-direction: column;
-            }
-            .copyright-symbol {
-                margin-right: 0;
-                margin-bottom: 5px;
-            }
         }
         
         @media (max-width: 480px) {
@@ -497,26 +373,6 @@
             .orange-container {
                 padding: 15px;
                 margin-top: 50px;
-            }
-            footer {
-                padding: 20px 10px;
-            }
-            .footer-section,
-            .footer-section1 {
-                min-width: 100%;
-                padding: 15px 10px;
-            }
-            .footer-logo {
-                max-width: 100px;
-            }
-            .footer-section h2 {
-                font-size: 1.2em;
-            }
-            .footer-section h3 {
-                font-size: 18px;
-            }
-            .footer-section ul li {
-                font-size: 13px;
             }
         }
     </style>
@@ -693,66 +549,72 @@
     </section>
 
     <!-- Footer (Updated from farm.html) -->
-    <footer>
+    <footer class="footer">
         <div class="footer-container">
-            <div class="footer-section1 company-info">
-                <img src="assets/image 4.png" alt="Akiko Sherman Infotech Logo" class="footer-logo">
-                <h2>Akiko Sherman Infotech</h2>
-                <p>Akiko Sherman Infotech is an independent division under Sherman group of companies. With more than 20 years of experience, the company has successfully delivered over 300 IT Projects for various Central and State Govt. Depts, PSUs and
-                    other enterprises.</p>
-            </div>
-            <div class="footer-section">
-                <h3>SiteMap</h3>
-                <ul>
-                    <li><a href="index.html" target="_blank">Home</a></li>
-                    <li><a href="company.html" target="_blank">The Company</a></li>
-                    <li><a href="#">Our Solutions</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="technology.html">Technologies</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Our Solutions</h3>
-                <ul>
-                    <li><a href="egov.html" target="_blank">E-Governance</a></li>
-                    <li><a href="web.html">Web Solutions</a></li>
-                    <li><a href="#">Mobility Solutions</a></li>
-                    <li><a href="#">Digital Marketing</a></li>
-                    <li><a href="#">GIGW Websites</a></li>
-                    <li><a href="#">Data Analytics</a></li>
-                    <li><a href="staff.html" target="_blank">Staffing & Support</a></li>
-                    <li><a href="#">Emerging Technologies</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>More</h3>
-                <ul>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Resources</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Use</a></li>
-                </ul>
-            </div>
-            <div class="footer-section contact">
-                <h3>Follow Us on Social Media</h3>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
+            <div class="footer-brand">
+                <img src="assets/image 4.png" alt="Akiko Sherman Infotech" class="footer-logo">
+                <div class="footer-about">
+                    <h2 class="footer-title">About Us</h2>
+                    <p>Akiko Sherman Infotech is an independent division under Sherman group of companies. With more than 25 years of experience, the company has successfully delivered over 500+ IT Projects for various Central and State Govt. Depts, PSUs
+                        and other enterprises.</p>
                 </div>
-                <h3>Reach Out to Us</h3>
-                <p>011-23684079</p>
-                <p><a href="mailto:suvidit@shermanindia.com">suvidit@shermanindia.com</a></p>
-                <p><a href="mailto:manu@shermanindia.com">manu@shermanindia.com</a></p>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="company.html">Company</a></li>
+                    <li><a href="#">Solutions</a></li>
+                    <li><a href="technology.html">Technologies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Services</h3>
+                <ul class="footer-links">
+                    <li><a href="egov.html">E-Governance</a></li>
+                    <li><a href="web.html">Web Solutions</a></li>
+                    <li><a href="#">Mobile Apps</a></li>
+                    <li><a href="#">Data Analytics</a></li>
+                    <li><a href="staff.html">Staffing</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Company</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Connect</h3>
+                <div class="social-media">
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+
+                <h3 class="footer-title">Contact Us</h3>
+                <div class="contact-info">
+                    <div class="phone-numbers">
+                        +91-11-41416847<br> +91-11-49849707
+                    </div>
+                    <a href="mailto:info@shermanindia.com">info@shermanindia.com</a>
+                </div>
             </div>
         </div>
-        <p class="copyright"><span class="copyright-symbol">©</span> All Rights Reserved, Akiko Sherman Infotech, 2025.</p>
-    </footer>
 
+        <div class="copyright">
+            © 2025 Akiko Sherman Infotech. All Rights Reserved.
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {

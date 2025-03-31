@@ -37,6 +37,12 @@
             font-size: clamp(1.2rem, 2.5vw, 1.5rem);
             margin: 0 0 15px;
             color: #333;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .category-section h3:hover {
+            color: #007BFF;
         }
         
         .category-section ul {
@@ -59,6 +65,12 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             opacity: 0;
             transform: translateY(20px);
+        }
+        
+        .category-section ul li.active-category {
+            background: #005bb5;
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }
         
         .category-section ul li.visible {
@@ -105,15 +117,15 @@
         }
         
         .carousel-item:nth-child(1) {
-            background-image: linear-gradient(to right, rgba(0, 123, 255, 0.7), rgba(0, 191, 255, 0.7)), url('assets/5EMERGINGTECHNOLOGY.webp');
+            background-image: linear-gradient(to right, rgba(0, 12, 24, 0.7), rgba(2, 54, 72, 0.7)), url('assets/twin\ bg.jpg');
         }
         
         .carousel-item:nth-child(2) {
-            background-image: linear-gradient(to right, rgba(0, 123, 255, 0.7), rgba(0, 191, 255, 0.7)), url('assets/AI is Transforming Software Development.jpg');
+            background-image: linear-gradient(to right, rgba(1, 12, 23, 0.7), rgba(2, 24, 31, 0.7)), url('assets/Group\ 1010110446.png');
         }
         
         .carousel-item:nth-child(3) {
-            background-image: linear-gradient(to right, rgba(0, 123, 255, 0.7), rgba(0, 191, 255, 0.7)), url('assets/why-multi-cloud-is-the-future-of-cloud-computing.webp');
+            background-image: linear-gradient(to right, rgba(1, 11, 22, 0.7), rgba(1, 14, 18, 0.7)), url('assets/deepeek2.jpg');
         }
         
         .carousel-content {
@@ -197,10 +209,11 @@
             display: flex;
             gap: 20px;
             box-sizing: border-box;
+            flex-wrap: nowrap;
         }
         
         .left-container {
-            flex: 4;
+            flex: 3;
             display: flex;
             gap: 20px;
         }
@@ -320,10 +333,11 @@
         }
         
         .sidebar {
+            flex: 1;
             display: flex;
             flex-direction: column;
             gap: 10px;
-            width: auto;
+            min-width: 250px;
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -411,110 +425,6 @@
         .blog-grid .blog-card:hover {
             transform: translateY(-5px);
         }
-        /* Footer Styles (Updated from Farm2Plate) */
-        
-        footer {
-            background-color: #1a1a1a !important;
-            color: #ffffff;
-            padding: 40px 20px;
-            text-align: center;
-            width: 100%;
-            position: relative;
-            z-index: 3;
-        }
-        
-        .footer-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-        
-        .footer-section {
-            flex: 1;
-            min-width: 200px;
-            padding: 10px 20px 20px 20px;
-            text-align: left;
-        }
-        
-        .contact p a {
-            color: #ffffff;
-            text-decoration: none;
-        }
-        
-        .footer-section1 {
-            flex: 1;
-            min-width: 200px;
-            padding: 40px 20px 20px 20px;
-            text-align: left;
-        }
-        
-        .company-info {
-            flex: 2;
-        }
-        
-        .footer-logo {
-            display: block;
-            max-width: 120px;
-            margin-bottom: 10px;
-        }
-        
-        .footer-section h2 {
-            font-size: 1.5em;
-            margin-bottom: 15px;
-        }
-        
-        .footer-section h3 {
-            font-size: 25px;
-            margin-bottom: 15px;
-        }
-        
-        .footer-section ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .footer-section ul li {
-            margin-bottom: 10px;
-            font-size: 16px;
-        }
-        
-        .footer-section ul li a {
-            color: #ffffff;
-            text-decoration: none;
-        }
-        
-        .footer-section ul li a:hover {
-            text-decoration: underline;
-        }
-        
-        .social-icons {
-            display: flex;
-            gap: 10px;
-            justify-content: flex-start;
-            margin: 10px 0;
-        }
-        
-        .social-icons a {
-            color: #ffffff;
-            font-size: 24px;
-            display: inline-block;
-        }
-        
-        .copyright {
-            text-align: left;
-            padding: 10px;
-            margin-top: 20px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .copyright-symbol {
-            font-size: 40px;
-            margin-right: 5px;
-        }
         /* Animations */
         
         @keyframes fadeIn {
@@ -583,11 +493,19 @@
             .carousel-controls {
                 bottom: 15px;
             }
+            .container {
+                flex-direction: column;
+            }
             .left-container {
                 flex-direction: column;
             }
             .right-posts {
                 grid-template-columns: 1fr;
+            }
+            .sidebar {
+                width: 100%;
+                min-width: auto;
+                margin-top: 20px;
             }
         }
         
@@ -632,26 +550,6 @@
             }
             .left-image {
                 height: 300px;
-            }
-            .footer-container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .footer-section,
-            .footer-section1 {
-                text-align: center;
-                padding: 20px 15px;
-            }
-            .social-icons {
-                justify-content: center;
-            }
-            .copyright {
-                text-align: center;
-                flex-direction: column;
-            }
-            .copyright-symbol {
-                margin-right: 0;
-                margin-bottom: 5px;
             }
         }
         
@@ -703,23 +601,6 @@
             .blog-card p {
                 font-size: 0.7rem;
             }
-            .footer-section,
-            .footer-section1 {
-                min-width: 100%;
-                padding: 15px 10px;
-            }
-            .footer-logo {
-                max-width: 100px;
-            }
-            .footer-section h2 {
-                font-size: 1.2em;
-            }
-            .footer-section h3 {
-                font-size: 18px;
-            }
-            .footer-section ul li {
-                font-size: 13px;
-            }
         }
     </style>
 </head>
@@ -729,7 +610,7 @@
     <nav>
         <div class="mainlogo">
             <img src="assets/image 4.png" alt="AKIKO SHERMAN INFOTECH Logo">
-            <a href="#" class="logo">AKIKO SHERMAN INFOTECH</a>
+            <a href="index.html" class="logo">AKIKO SHERMAN INFOTECH</a>
         </div>
         <label for="btn" class="icon">
             <span class="fa fa-bars"></span>
@@ -763,34 +644,31 @@
         </ul>
     </nav>
 
-    <!-- Category Section -->
-
-
     <!-- Banner Section -->
     <div class="banner">
         <div class="carousel">
             <div class="carousel-item">
                 <div class="carousel-content">
                     <h1>DIVE INTO AKIKO BLOGS</h1>
-                    <h2>5 Emerging Technologies to Watch in 2024</h2>
-                    <p>Discover the top technologies that are set to revolutionize industries in the coming year.</p>
-                    <button>Read More</button>
+                    <h2>Unlocking the Future: The Bricolage of Digital Twins and Generative AI</h2>
+                    <p>Imagine a world where you can predict a machine's failure before it happens, understand a city's traffic patterns with uncanny precision, or even simulate entire ecosystems to save endangered species.</p>
+                    <button onclick="window.location.href='./blog-posts/twin.html'">Read More</button>
                 </div>
             </div>
             <div class="carousel-item">
                 <div class="carousel-content">
                     <h1>DIVE INTO AKIKO BLOGS</h1>
-                    <h2>How AI is Transforming Software Development</h2>
-                    <p>Learn how artificial intelligence is reshaping the way we build and deploy software.</p>
-                    <button>Read More</button>
+                    <h2>Finding Calm Amidst the Chaos: Why Meditation Reveals Hidden Stress and How It Heal</h2>
+                    <p>In the relentless pace of modern work life, it's easy to overlook the cumulative stress and fatigue we carry. Daily responsibilities and pressures keep our minds occupied, masking the underlying burden we bear. </p>
+                    <button onclick="window.location.href='./blog-posts/stress.html'">Read More</button>
                 </div>
             </div>
             <div class="carousel-item">
                 <div class="carousel-content">
                     <h1>DIVE INTO AKIKO BLOGS</h1>
-                    <h2>The Future of Cloud Computing</h2>
-                    <p>Explore the advancements in cloud technology and what it means for businesses.</p>
-                    <button>Read More</button>
+                    <h2>Is AI Finally Learning to Think? Meet DeepSeek R1</h2>
+                    <p>Discover how DeepSeek R1 is revolutionizing AI with logical reasoning and self-improvement.</p>
+                    <button onclick="window.location.href='./blog-posts/deepseek.html'">Read More</button>
                 </div>
             </div>
         </div>
@@ -801,60 +679,63 @@
         </div>
     </div>
     <div class="category-section">
-        <h3>Explore Categories</h3>
+        <h3 onclick="filterPosts('all')">Explore Categories</h3>
         <ul>
             <li onclick="filterPosts('Technology')">Technology</li>
             <li onclick="filterPosts('AI')">AI</li>
             <li onclick="filterPosts('Cloud Computing')">Cloud Computing</li>
             <li onclick="filterPosts('Cybersecurity')">Cybersecurity</li>
             <li onclick="filterPosts('Software Development')">Software Development</li>
+            <li onclick="filterPosts('LifeStyle')">LifeStyle</li>
         </ul>
     </div>
 
     <div class="container">
         <div class="left-container">
             <div class="left-image">
-                <img src="assets/leftblogimage.png" alt="Left Image">
-                <div class="overlay">
-                    <h2>“The Hidden Secret to Social Media Success: It's Not About Selling”</h2>
-                    <button>Read</button>
+                <img src="assets/secret 2.png" alt="Left Image">
+                <div class="overlay" onclick="window.location.href='./blog-posts/secret.html'">
+                    <h2>"The Hidden Secret to Social Media Success: It's Not About Selling"</h2>
+                    <button onclick="window.location.href='./blog-posts/secret.html'">Read</button>
                 </div>
             </div>
             <div class="right-posts">
-                <div class="blog-card" data-category="Technology">
-                    <img src="assets/left-rightblog1.png" alt="Blog Image 1">
+                <div class="blog-card" data-category="AI">
+                    <img src="assets/twin blog.jpg" alt="Blog Image 1">
                     <div class="blog-card-content">
-                        <h2>5 Emerging Technologies to Watch in 2024</h2>
-                        <p>Discover the top technologies that are set to revolutionize industries in the coming year.</p>
-                        <a href="#">Read More</a>
+                        <h2>Unlocking the Future: The Bricolage of Digital Twins and Generative AI</h2>
+                        <p>Imagine a world where you can predict a machine's failure before it happens, understand a city's traffic patterns with uncanny precision, or even simulate entire ecosystems to save endangered species. </p>
+                        <a href="./blog-posts/deepseek.html">Read More</a>
                     </div>
                 </div>
                 <div class="blog-card" data-category="AI">
-                    <img src="assets/left-rightblog2.png" alt="Blog Image 2">
+                    <img src="assets/Deepseek Img.png" alt="DeepSeek R1 AI Model">
                     <div class="blog-card-content">
-                        <h2>How AI is Transforming Software Development</h2>
-                        <p>Learn how artificial intelligence is reshaping the way we build and deploy software.</p>
-                        <a href="#">Read More</a>
+                        <h2>Is AI Finally Learning to Think? Meet DeepSeek R1</h2>
+                        <p>Discover how DeepSeek R1 is revolutionizing AI with logical reasoning and self-improvement.</p>
+                        <a href="./blog-posts/deepseek.html">Read More</a>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="sidebar">
             <div class="sidebar-section">
                 <h3>Popular Posts</h3>
                 <ul>
-                    <li><a href="#">The Future of Cloud Computing</a></li>
-                    <li><a href="#">Cybersecurity Best Practices for 2024</a></li>
-                    <li><a href="#">Top Programming Languages in 2024</a></li>
+                    <li><a href="#">Is the Future of Software Development Already Here?</a></li>
+                    <li><a href="#">Democratizing Intelligence: The True Power of AI Unleashed</a></li>
+                    <li><a href="#">Is Your Business Really Ready for the Cloud?</a></li>
                 </ul>
             </div>
             <div class="sidebar-section">
                 <h3>Categories</h3>
                 <ul>
-                    <li><a href="#">Artificial Intelligence</a></li>
-                    <li><a href="#">Cloud Computing</a></li>
-                    <li><a href="#">Cybersecurity</a></li>
-                    <li><a href="#">Software Development</a></li>
+                    <li><a href="#" onclick="filterPosts('AI')">Artificial Intelligence</a></li>
+                    <li><a href="#" onclick="filterPosts('Cloud Computing')">Cloud Computing</a></li>
+                    <li><a href="#" onclick="filterPosts('Cybersecurity')">Cybersecurity</a></li>
+                    <li><a href="#" onclick="filterPosts('Software Development')">Software Development</a></li>
+                    <li><a href="#" onclick="filterPosts('LifeStyle')">Lifestyle</a></li>
                 </ul>
             </div>
             <div class="sidebar-section newsletter">
@@ -868,106 +749,131 @@
     <div class="additional-blog-posts">
         <h2>More Blog Posts</h2>
         <div class="blog-grid">
-            <div class="blog-card" data-category="Technology">
-                <img src="assets/blog3.jpg" alt="Blog Image 3">
+            <div class="blog-card" data-category="Software Development">
+                <img src="assets/softdev blog.png" alt="Blog Image 3">
                 <div class="blog-card-content">
-                    <h2>Top Programming Languages in 2024</h2>
-                    <p>Discover the most in-demand programming languages for the upcoming year.</p>
-                    <a href="#">Read More</a>
+                    <h2>Is the Future of Software Development Already Here?</h2>
+                    <p>The tech world is buzzing with a question that seems to be on everyone's mind: Is the future of software development already here? The landscape is rapidly evolving, and it's not just about writing lines of code anymore.</p>
+                    <a href="./blog-posts/softdev.html">Read More</a>
                 </div>
             </div>
-            <div class="blog-card" data-category="Cybersecurity">
-                <img src="assets/blog4.jpg" alt="Blog Image 4">
+            <div class="blog-card" data-category="LifeStyle">
+                <img src="assets/stress blog.png" alt="Blog Image 4">
                 <div class="blog-card-content">
-                    <h2>Cybersecurity Best Practices for 2024</h2>
-                    <p>Learn how to protect your systems from the latest cyber threats.</p>
-                    <a href="#">Read More</a>
+                    <h2>Finding Calm Amidst the Chaos: Why Meditation Reveals Hidden Stress and How It Heals</h2>
+                    <p>In the relentless pace of modern work life, it's easy to overlook the cumulative stress and fatigue we carry. Daily responsibilities and pressures keep our minds occupied, masking the underlying burden we bear. </p>
+                    <a href="./blog-posts/stress.html">Read More</a>
                 </div>
             </div>
             <div class="blog-card" data-category="AI">
-                <img src="assets/blog5.jpg" alt="Blog Image 5">
+                <img src="assets/Democartizing.jpg" alt="Blog Image 5">
                 <div class="blog-card-content">
-                    <h2>AI in Healthcare: The Future of Medicine</h2>
-                    <p>Explore how AI is revolutionizing the healthcare industry.</p>
-                    <a href="#">Read More</a>
+                    <h2>Democratizing Intelligence: The True Power of AI Unleashed</h2>
+                    <p>In a recent interview, Elon Musk posed a thought-provoking question: "Have we truly democratized AI?" As we look around, it seems the answer might be yes. </p>
+                    <a href="./blog-posts/demo.html">Read More</a>
                 </div>
             </div>
             <div class="blog-card" data-category="Cloud Computing">
-                <img src="assets/blog6.jpg" alt="Blog Image 6">
+                <img src="assets/clous blog.png" alt="Blog Image 6">
                 <div class="blog-card-content">
-                    <h2>Multi-Cloud Strategies for Enterprises</h2>
-                    <p>Understand the benefits and challenges of adopting a multi-cloud approach.</p>
-                    <a href="#">Read More</a>
+                    <h2>Is Your Business Really Ready for the Cloud?</h2>
+                    <p>Understand the benefits and challenges of adopting a cloud approach.</p>
+                    <a href="./blog-posts/cloud.html">Read More</a>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Footer (Updated from Farm2Plate) -->
-    <footer>
+    <footer class="footer">
         <div class="footer-container">
-            <div class="footer-section1 company-info">
-                <img src="assets/image 4.png" alt="Akiko Sherman Infotech Logo" class="footer-logo">
-                <h2>Akiko Sherman Infotech</h2>
-                <p>Akiko Sherman Infotech is an independent division under Sherman group of companies. With more than 20 years of experience, the company has successfully delivered over 300 IT Projects for various Central and State Govt. Depts, PSUs and
-                    other enterprises.</p>
-            </div>
-            <div class="footer-section">
-                <h3>SiteMap</h3>
-                <ul>
-                    <li><a href="index.html" target="_blank">Home</a></li>
-                    <li><a href="Company.html" target="_blank">The Company</a></li>
-                    <li><a href="#">Our Solutions</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Technologies</a></li>
-                    <li><a href="./akiko blogs/index.html">Blog</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Our Solutions</h3>
-                <ul>
-                    <li><a href="Egovernance.html" target="_blank">E-Governance</a></li>
-                    <li><a href="#">Web Solutions</a></li>
-                    <li><a href="#">Mobility Solutions</a></li>
-                    <li><a href="#">Digital Marketing</a></li>
-                    <li><a href="#">GIGW Websites</a></li>
-                    <li><a href="#">Data Analytics</a></li>
-                    <li><a href="staffing&support.html" target="_blank">Staffing & Support</a></li>
-                    <li><a href="#">Emerging Technologies</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>More</h3>
-                <ul>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Resources</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Use</a></li>
-                </ul>
-            </div>
-            <div class="footer-section contact">
-                <h3>Follow Us on Social Media</h3>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
+            <div class="footer-brand">
+                <img src="assets/image 4.png" alt="Akiko Sherman Infotech" class="footer-logo">
+                <div class="footer-about">
+                    <h2 class="footer-title">About Us</h2>
+                    <p>Akiko Sherman Infotech is an independent division under Sherman group of companies. With more than 25 years of experience, the company has successfully delivered over 500+ IT Projects for various Central and State Govt. Depts, PSUs
+                        and other enterprises.</p>
                 </div>
-                <h3>Reach Out to Us</h3>
-                <p>011-23684079</p>
-                <p><a href="mailto:suvidit@shermanindia.com">suvidit@shermanindia.com</a></p>
-                <p><a href="mailto:manu@shermanindia.com">manu@shermanindia.com</a></p>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="company.html">Company</a></li>
+                    <li><a href="#">Solutions</a></li>
+                    <li><a href="technology.html">Technologies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Services</h3>
+                <ul class="footer-links">
+                    <li><a href="egov.html">E-Governance</a></li>
+                    <li><a href="web.html">Web Solutions</a></li>
+                    <li><a href="#">Mobile Apps</a></li>
+                    <li><a href="#">Data Analytics</a></li>
+                    <li><a href="staff.html">Staffing</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Company</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Connect</h3>
+                <div class="social-media">
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+
+                <h3 class="footer-title">Contact Us</h3>
+                <div class="contact-info">
+                    <div class="phone-numbers">
+                        +91-11-41416847<br> +91-11-49849707
+                    </div>
+                    <a href="mailto:info@shermanindia.com">info@shermanindia.com</a>
+                </div>
             </div>
         </div>
-        <p class="copyright"><span class="copyright-symbol">©</span> All Rights Reserved, Akiko Sherman Infotech, 2023.</p>
-    </footer>
 
+        <div class="copyright">
+            © 2025 Akiko Sherman Infotech. All Rights Reserved.
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- JavaScript (Updated from Farm2Plate) -->
     <script>
+        // Footer Animation
+        gsap.fromTo('footer', {
+            opacity: 0,
+            y: 50
+        }, {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: 'power4.out',
+            scrollTrigger: {
+                trigger: '.additional-blog-posts',
+                start: 'bottom 80%',
+                toggleActions: 'play none none none'
+            }
+        });
+
         document.addEventListener("DOMContentLoaded", function() {
-            // Navigation Logic (Updated from Farm2Plate)
+            // Navigation Logic
             document.querySelector('.icon').addEventListener('click', function(e) {
                 e.stopPropagation();
                 const navUl = document.querySelector('nav ul');
@@ -1001,18 +907,6 @@
                 });
             });
 
-            document.addEventListener('click', function(e) {
-                if (window.innerWidth <= 968) {
-                    dropdownArrows.forEach(arrow => {
-                        const dropdown = arrow.parentElement.nextElementSibling;
-                        if (!arrow.parentElement.contains(e.target) && !dropdown.contains(e.target)) {
-                            dropdown.style.display = 'none';
-                            arrow.style.transform = 'rotate(0deg)';
-                        }
-                    });
-                }
-            });
-
             // Carousel Functionality
             let currentSlide = 0;
             const carousel = document.querySelector('.carousel');
@@ -1036,17 +930,41 @@
                 goToSlide(currentSlide);
             }, 5000);
 
-            // Category Filtering
+            // Category Filtering - Fixed Version
             function filterPosts(category) {
                 const blogCards = document.querySelectorAll('.blog-card');
+                const categoryItems = document.querySelectorAll('.category-section ul li');
+                const categoryTitle = document.querySelector('.category-section h3');
+
+                // Reset all category buttons
+                categoryItems.forEach(item => {
+                    item.classList.remove('active-category');
+                });
+
+                // Highlight selected category or "All" if category is 'all'
+                if (category === 'all') {
+                    categoryTitle.classList.add('active-category');
+                } else {
+                    categoryTitle.classList.remove('active-category');
+                    categoryItems.forEach(item => {
+                        if (item.textContent.trim() === category) {
+                            item.classList.add('active-category');
+                        }
+                    });
+                }
+
+                // Filter blog cards
                 blogCards.forEach(card => {
-                    if (card.getAttribute('data-category') === category || category === 'All') {
+                    if (category === 'all' || card.getAttribute('data-category') === category) {
                         card.style.display = 'block';
                     } else {
                         card.style.display = 'none';
                     }
                 });
             }
+
+            // Initialize with all posts showing
+            filterPosts('all');
 
             // Scroll Animations
             const observer = new IntersectionObserver((entries) => {

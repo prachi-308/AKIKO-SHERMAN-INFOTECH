@@ -8,16 +8,19 @@
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>AI Features Section</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
         }
         
         body {
@@ -37,7 +40,6 @@
             padding-top: 70px;
             perspective: 1000px;
             z-index: 2;
-            font-family: 'Roboto', sans-serif;
         }
         
         .parallax {
@@ -441,50 +443,6 @@
         }
         /* Section 4 */
         
-        .sec-4 {
-            font-family: "Montserrat", sans-serif;
-            background-color: #ffffff;
-            padding: 1rem;
-            text-align: center;
-            position: relative;
-            margin-bottom: 20px;
-        }
-        
-        .sec-4 h2 {
-            font-size: clamp(1.5rem, 5vw, 3rem);
-            margin-bottom: 1.5rem;
-            opacity: 0;
-            transform: translateY(50px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-        
-        .sec-4 h2.in-view {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .services-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem;
-        }
-        
-        .service-item {
-            flex: 1 1 100%;
-            max-width: 150px;
-            text-align: center;
-            opacity: 0;
-            transform: translateY(50px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        
-        .service-item.in-view {
-            opacity: 1;
-            transform: translateY(0);
-            animation: bounceIn 0.8s ease-out;
-        }
-        
         @keyframes bounceIn {
             0% {
                 transform: translateY(-100px);
@@ -498,130 +456,6 @@
                 transform: translateY(0);
                 opacity: 1;
             }
-        }
-        
-        .service-item:hover {
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), 0 0 10px rgba(255, 255, 255, 0.3);
-            transform: translateY(-5px) scale(1.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .service-item img {
-            width: 100%;
-            border-radius: 10px;
-            aspect-ratio: 1;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
-        
-        .service-item:hover img {
-            transform: scale(1.1) rotate(3deg);
-        }
-        
-        .service-item p {
-            font-size: clamp(0.8rem, 2.5vw, 1.2rem);
-            margin-top: 0.5rem;
-        }
-        /* Footer */
-        
-        footer {
-            background-color: #1a1a1a;
-            color: #ffffff;
-            padding: 40px 20px;
-            text-align: center;
-            width: 100%;
-            position: relative;
-            z-index: 3;
-            min-height: 200px;
-            margin-top: 20px;
-            font-family: "Montserrat", sans-serif;
-        }
-        
-        .footer-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-        
-        .footer-section {
-            flex: 1;
-            min-width: 200px;
-            padding: 10px 20px 20px 20px;
-            text-align: left;
-        }
-        
-        .footer-section1 {
-            flex: 1;
-            min-width: 200px;
-            padding: 40px 20px 20px 20px;
-            text-align: left;
-        }
-        
-        .company-info {
-            flex: 2;
-        }
-        
-        .footer-logo {
-            display: block;
-            max-width: 120px;
-            margin-bottom: 10px;
-        }
-        
-        .footer-section h2 {
-            font-size: 1.5em;
-            margin-bottom: 15px;
-        }
-        
-        .footer-section h3 {
-            font-size: 25px;
-            margin-bottom: 15px;
-        }
-        
-        .footer-section ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .footer-section ul li {
-            margin-bottom: 10px;
-            font-size: 16px;
-        }
-        
-        .footer-section ul li a {
-            color: #ffffff;
-            text-decoration: none;
-        }
-        
-        .footer-section ul li a:hover {
-            text-decoration: underline;
-        }
-        
-        .social-icons {
-            display: flex;
-            gap: 10px;
-            justify-content: flex-start;
-            margin: 10px 0;
-        }
-        
-        .social-icons a {
-            color: #ffffff;
-            font-size: 24px;
-        }
-        
-        .copyright {
-            text-align: left;
-            padding: 10px;
-            margin-top: 20px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .copyright-symbol {
-            font-size: 40px;
-            margin-right: 5px;
         }
         /* Responsive Design */
         
@@ -761,31 +595,10 @@
             .ai-section img {
                 border-radius: 10px 10px 0 0;
             }
-            .footer-container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .footer-section,
-            .footer-section1 {
-                text-align: center;
-                padding: 20px 15px;
-            }
-            .social-icons {
-                justify-content: center;
-            }
-            .copyright {
-                text-align: center;
-                flex-direction: column;
-            }
-            .copyright-symbol {
-                margin-right: 0;
-                margin-bottom: 5px;
-            }
         }
         
         @media (min-width: 768px) {
-            .sec-3,
-            .sec-4 {
+            .sec-3 {
                 padding: 2rem 0;
             }
             .ai-container {
@@ -830,9 +643,6 @@
             }
             .ai-dots {
                 display: none;
-            }
-            .service-item {
-                flex: 1 1 18%;
             }
         }
         
@@ -900,26 +710,6 @@
             .content-description {
                 font-size: 0.8rem;
             }
-            footer {
-                padding: 20px 10px;
-            }
-            .footer-section,
-            .footer-section1 {
-                min-width: 100%;
-                padding: 15px 10px;
-            }
-            .footer-logo {
-                max-width: 100px;
-            }
-            .footer-section h2 {
-                font-size: 1.2em;
-            }
-            .footer-section h3 {
-                font-size: 18px;
-            }
-            .footer-section ul li {
-                font-size: 13px;
-            }
         }
         
         @media (max-width: 400px) {
@@ -949,16 +739,97 @@
             }
         }
         
-        @media (min-width: 360px) {
-            .service-item {
-                flex: 1 1 45%;
-            }
+        .sec-4 {
+            padding: 4rem 1rem;
+            text-align: center;
+            background: white;
         }
         
-        @media (min-width: 600px) {
-            .service-item {
-                flex: 1 1 30%;
-            }
+        .sec-4 h2 {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: #222;
+            position: relative;
+        }
+        
+        .sec-4 h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #5300a1, #0060a1);
+        }
+        
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .service-item {
+            background: white;
+            border-radius: 10px;
+            padding: 25px 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #f0f0f0;
+            opacity: 1;
+            /* Changed from 0 to 1 to ensure visibility */
+            transform: translateY(0);
+            /* Changed from 50px to 0 to ensure visibility */
+        }
+        /* Top Border Hover Effect */
+        
+        .service-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #5300a1, #0060a1);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+        
+        .service-item:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .service-img-container {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .service-item img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+        
+        .service-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .service-item p {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333;
+            margin-top: 15px;
         }
     </style>
 </head>
@@ -967,7 +838,7 @@
     <nav>
         <div class="mainlogo">
             <img src="assets/image 4.png" alt="AKIKO SHERMAN INFOTECH Logo">
-            <a href="#" class="logo">AKIKO SHERMAN INFOTECH</a>
+            <a href="index.html" class="logo">AKIKO SHERMAN INFOTECH</a>
         </div>
         <div class="icon">
             <span class="fa fa-bars"></span>
@@ -1104,64 +975,71 @@
             </div>
         </div>
     </section>
-    <footer>
+    <footer class="footer">
         <div class="footer-container">
-            <div class="footer-section1 company-info">
-                <img src="assets/image 4.png" alt="Akiko Sherman Infotech Logo" class="footer-logo">
-                <h2>Akiko Sherman Infotech</h2>
-                <p>Akiko Sherman Infotech is an independent division under Sherman group of companies. With more than 20 years of experience, the company has successfully delivered over 300 IT Projects for various Central and State Govt. Depts, PSUs and
-                    other enterprises.</p>
-            </div>
-            <div class="footer-section">
-                <h3>SiteMap</h3>
-                <ul>
-                    <li><a href="index.html" target="_blank">Home</a></li>
-                    <li><a href="Company.html" target="_blank">The Company</a></li>
-                    <li><a href="#">Our Solutions</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Technologies</a></li>
-                    <li><a href="./akiko blogs/index.html">Blog</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Our Solutions</h3>
-                <ul>
-                    <li><a href="Egovernance.html" target="_blank">E-Governance</a></li>
-                    <li><a href="#">Web Solutions</a></li>
-                    <li><a href="#">Mobility Solutions</a></li>
-                    <li><a href="#">Digital Marketing</a></li>
-                    <li><a href="#">GIGW Websites</a></li>
-                    <li><a href="#">Data Analytics</a></li>
-                    <li><a href="staffing&support.html" target="_blank">Staffing & Support</a></li>
-                    <li><a href="#">Emerging Technologies</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>More</h3>
-                <ul>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Resources</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Use</a></li>
-                </ul>
-            </div>
-            <div class="footer-section contact">
-                <h3>Follow Us on Social Media</h3>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
+            <div class="footer-brand">
+                <img src="assets/image 4.png" alt="Akiko Sherman Infotech" class="footer-logo">
+                <div class="footer-about">
+                    <h2 class="footer-title">About Us</h2>
+                    <p>Akiko Sherman Infotech is an independent division under Sherman group of companies. With more than 25 years of experience, the company has successfully delivered over 500+ IT Projects for various Central and State Govt. Depts, PSUs
+                        and other enterprises.</p>
                 </div>
-                <h3>Reach Out to Us</h3>
-                <p>011-23684079</p>
-                <p><a href="mailto:suvidit@shermanindia.com">suvidit@shermanindia.com</a></p>
-                <p><a href="mailto:manu@shermanindia.com">manu@shermanindia.com</a></p>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="company.html">Company</a></li>
+                    <li><a href="#">Solutions</a></li>
+                    <li><a href="technology.html">Technologies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Services</h3>
+                <ul class="footer-links">
+                    <li><a href="egov.html">E-Governance</a></li>
+                    <li><a href="web.html">Web Solutions</a></li>
+                    <li><a href="#">Mobile Apps</a></li>
+                    <li><a href="#">Data Analytics</a></li>
+                    <li><a href="staff.html">Staffing</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Company</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Connect</h3>
+                <div class="social-media">
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+
+                <h3 class="footer-title">Contact Us</h3>
+                <div class="contact-info">
+                    <div class="phone-numbers">
+                        +91-11-41416847<br> +91-11-49849707
+                    </div>
+                    <a href="mailto:info@shermanindia.com">info@shermanindia.com</a>
+                </div>
             </div>
         </div>
-        <p class="copyright"><span class="copyright-symbol">©</span> All Rights Reserved, Akiko Sherman Infotech, 2023.</p>
+
+        <div class="copyright">
+            © 2025 Akiko Sherman Infotech. All Rights Reserved.
+        </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>

@@ -35,7 +35,6 @@
             padding: 120px 20px 40px;
             background: linear-gradient(135deg, #1e40af, #14b8a6);
             overflow: hidden;
-            font-family: 'Poppins', sans-serif;
         }
         
         .hero-background {
@@ -44,7 +43,7 @@
             left: 0;
             width: 100%;
             height: 120%;
-            background: url('assets/infracon_backgroundimage (1).png') no-repeat center center/cover;
+            background: url('assets/tamra\ bg.png') no-repeat center center/cover;
             z-index: 0;
             filter: brightness(0.7);
         }
@@ -600,6 +599,14 @@
         }
         
         .user {
+            display: flex;
+            /* Added to stack image and text vertically */
+            flex-direction: column;
+            /* Ensures vertical alignment */
+            justify-content: center;
+            /* Centers content vertically */
+            align-items: center;
+            /* Centers content horizontally */
             text-align: center;
             opacity: 0;
             transform: translateY(60px);
@@ -625,8 +632,12 @@
         }
         
         .user img {
-            max-width: 140px;
-            height: auto;
+            width: 140px;
+            /* Fixed width for consistency */
+            height: 140px;
+            /* Fixed height for consistency */
+            object-fit: contain;
+            /* Ensures images scale properly */
             margin-bottom: 30px;
             transition: transform 0.5s ease;
         }
@@ -644,6 +655,7 @@
         .user:hover p {
             color: #7e22ce;
         }
+        /* Animation Keyframes */
         
         @keyframes fadeInUp {
             from {
@@ -751,7 +763,9 @@
                 padding: 30px 20px;
             }
             .user img {
-                max-width: 120px;
+                width: 120px;
+                /* Adjusted for smaller screens */
+                height: 120px;
             }
             .user p {
                 font-size: 1.2rem;
@@ -815,7 +829,9 @@
                 padding: 25px 15px;
             }
             .user img {
-                max-width: 100px;
+                width: 100px;
+                /* Adjusted for smaller screens */
+                height: 100px;
             }
             .user p {
                 font-size: 1rem;
@@ -896,22 +912,22 @@
             <div class="stats-container">
                 <div class="stat-item">
                     <i class="fas fa-gem stat-icon"></i>
-                    <h4 class="stat-value" data-target="800000">800000+</h4>
+                    <h4 class="stat-value" data-target="8">8 Lac+</h4>
                     <p class="stat-title">Estimated Resources</p>
                 </div>
                 <div class="stat-item">
                     <i class="fas fa-rupee-sign stat-icon"></i>
-                    <h4 class="stat-value" data-target="700000">700000+</h4>
+                    <h4 class="stat-value" data-target="7">7 Lac+</h4>
                     <p class="stat-title">Revenue to State</p>
                 </div>
                 <div class="stat-item">
                     <i class="fas fa-handshake stat-icon"></i>
-                    <h4 class="stat-value" data-target="800000">800000+</h4>
+                    <h4 class="stat-value" data-target="8">8 Lac+</h4>
                     <p class="stat-title">Auction Contribution</p>
                 </div>
                 <div class="stat-item">
                     <i class="fas fa-leaf stat-icon"></i>
-                    <h4 class="stat-value" data-target="700000">700000+</h4>
+                    <h4 class="stat-value" data-target="7">7 Lac+</h4>
                     <p class="stat-title">Resource Augmentation</p>
                 </div>
             </div>
@@ -1032,85 +1048,92 @@
     <section class="sec-7">
         <h1>USERS</h1>
         <div class="container">
-            <div class="user"><img src="assets/ministry-of-mines-logo.png" alt="Ministry of Mines">
-                <p>Ministry of Mines</p>
+            <div class="user"><img src="assets/morth-goi-removebg-preview.png" alt="MORTH">
+                <p>MORTH</p>
             </div>
-            <div class="user"><img src="assets/dmg-logo.png" alt="DMGs">
-                <p>DMGs</p>
+            <div class="user"><img src="assets/NHAI-removebg-preview.png" alt="NHAI">
+                <p>NHAI</p>
             </div>
-            <div class="user"><img src="assets/state-revenue-dept-logo.png" alt="State Revenue Dept">
-                <p>State Revenue Dept</p>
+            <div class="user"><img src="assets/nhidcl-logo.webp" alt="NHIDCL">
+                <p>NHIDCL</p>
             </div>
-            <div class="user"><img src="assets/ibm-logo.png" alt="IBM Regional Offices">
-                <p>IBM Regional Offices</p>
+            <div class="user"><img src="assets/stategovt-removebg-preview.png" alt="State Government">
+                <p>State Government</p>
             </div>
         </div>
     </section>
 
     <!-- Updated Footer -->
-    <footer>
+    <footer class="footer">
         <div class="footer-container">
-            <div class="footer-section1 company-info">
-                <img src="assets/image 4.png" alt="Akiko Sherman Infotech Logo" class="footer-logo">
-                <h2>Akiko Sherman Infotech</h2>
-                <p>Akiko Sherman Infotech is an independent division under Sherman group of companies. With more than 20 years of experience, the company has successfully delivered over 300 IT Projects for various Central and State Govt. Depts, PSUs and
-                    other enterprises.</p>
-            </div>
-            <div class="footer-section">
-                <h3>SiteMap</h3>
-                <ul>
-                    <li><a href="index.html" target="_blank">Home</a></li>
-                    <li><a href="company.html" target="_blank">The Company</a></li>
-                    <li><a href="#">Our Solutions</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Technologies</a></li>
-                    <li><a href="./akiko blogs/index.html">Blog</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Our Solutions</h3>
-                <ul>
-                    <li><a href="egov.html" target="_blank">E-Governance</a></li>
-                    <li><a href="#">Web Solutions</a></li>
-                    <li><a href="#">Mobility Solutions</a></li>
-                    <li><a href="#">Digital Marketing</a></li>
-                    <li><a href="#">GIGW Websites</a></li>
-                    <li><a href="#">Data Analytics</a></li>
-                    <li><a href="staff.html" target="_blank">Staffing & Support</a></li>
-                    <li><a href="#">Emerging Technologies</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>More</h3>
-                <ul>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Resources</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Use</a></li>
-                </ul>
-            </div>
-            <div class="footer-section contact">
-                <h3>Follow Us on Social Media</h3>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
+            <div class="footer-brand">
+                <img src="assets/image 4.png" alt="Akiko Sherman Infotech" class="footer-logo">
+                <div class="footer-about">
+                    <h2 class="footer-title">About Us</h2>
+                    <p>Akiko Sherman Infotech is an independent division under Sherman group of companies. With more than 25 years of experience, the company has successfully delivered over 500+ IT Projects for various Central and State Govt. Depts, PSUs
+                        and other enterprises.</p>
                 </div>
-                <h3>Reach Out to Us</h3>
-                <p>011-23684079</p>
-                <p><a href="mailto:suvidit@shermanindia.com">suvidit@shermanindia.com</a></p>
-                <p><a href="mailto:manu@shermanindia.com">manu@shermanindia.com</a></p>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="company.html">Company</a></li>
+                    <li><a href="#">Solutions</a></li>
+                    <li><a href="technology.html">Technologies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Services</h3>
+                <ul class="footer-links">
+                    <li><a href="egov.html">E-Governance</a></li>
+                    <li><a href="web.html">Web Solutions</a></li>
+                    <li><a href="#">Mobile Apps</a></li>
+                    <li><a href="#">Data Analytics</a></li>
+                    <li><a href="staff.html">Staffing</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Company</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Connect</h3>
+                <div class="social-media">
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+
+                <h3 class="footer-title">Contact Us</h3>
+                <div class="contact-info">
+                    <div class="phone-numbers">
+                        +91-11-41416847<br> +91-11-49849707
+                    </div>
+                    <a href="mailto:info@shermanindia.com">info@shermanindia.com</a>
+                </div>
             </div>
         </div>
-        <p class="copyright"><span class="copyright-symbol">©</span> All Rights Reserved, Akiko Sherman Infotech, 2025.</p>
-    </footer>
 
+        <div class="copyright">
+            © 2025 Akiko Sherman Infotech. All Rights Reserved.
+        </div>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <script>
+        // Accordion Functionality
         // Accordion Functionality
         const accordionItems = document.querySelectorAll('.accordion-item');
         accordionItems.forEach(item => {
@@ -1157,23 +1180,42 @@
 
         // Counter Animation for Stats
         function animateCounter(counter) {
-            const target = +counter.getAttribute('data-target');
+            const target = parseFloat(counter.getAttribute('data-target')); // Numeric target value
+            const originalText = counter.textContent.trim(); // Original text (e.g., "8 Lac+")
+            const hasPlus = originalText.includes('+');
+            const isLac = originalText.includes("Lac");
+            const isCrore = originalText.includes("Cr");
+
             let count = 0;
-            const increment = target / 50;
-            const update = () => {
-                if (count < target) {
-                    count += increment;
-                    counter.textContent = Math.floor(count) + '+';
+            const duration = 2000; // Animation duration in milliseconds
+            const start = performance.now();
+
+            const update = (timestamp) => {
+                const elapsed = timestamp - start;
+                const progress = Math.min(elapsed / duration, 1); // Cap at 1 (100%)
+                count = progress * target;
+
+                if (isLac) {
+                    counter.textContent = `${count.toFixed(1)}${hasPlus ? '+' : ''} Lac`;
+                } else if (isCrore) {
+                    counter.textContent = `${Math.floor(count)}${hasPlus ? '+' : ''} Cr`;
+                } else {
+                    counter.textContent = Math.floor(count) + (hasPlus ? '+' : '');
+                }
+
+                if (progress < 1) {
                     requestAnimationFrame(update);
                 } else {
-                    counter.textContent = target + '+';
+                    counter.textContent = originalText; // Reset to original text
                 }
             };
-            update();
+
+            requestAnimationFrame(update);
         }
 
+        // Initialize on load and scroll
+        document.addEventListener('DOMContentLoaded', revealOnScroll);
         window.addEventListener('scroll', revealOnScroll);
-        window.addEventListener('load', revealOnScroll);
 
         // Navbar Functionality
         document.querySelector('.icon').addEventListener('click', function(e) {
@@ -1200,7 +1242,7 @@
         dropdownArrows.forEach(arrow => {
             const parentLink = arrow.parentElement;
             parentLink.addEventListener('click', function(e) {
-                if (window.innerWidth <= 1160) { // Match breakpoint from previous updates
+                if (window.innerWidth <= 1160) {
                     e.preventDefault();
                     e.stopPropagation();
                     const dropdown = this.nextElementSibling;
